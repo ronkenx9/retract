@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RETRACT — Selective invalidation after a cold start</title>
+  <title>RETRACT — Correct one source. Watch what withdraws.</title>
   <meta name="description" content="RETRACT: Correct one source. Kill the process. Fresh cold start. Dependent briefings withdraw and rebuild. Unaffected control artifact stays byte-identical. Powered by Sibyl Memory." />
   <meta name="theme-color" content="#0c0c0b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
     <div class="topbar-inner">
       <a class="brand" href="./">RETRACT <span>sibyl-memory-client==0.8.0</span></a>
       <nav class="nav" aria-label="Primary">
+        <a href="#demo">Demo</a>
         <a href="#hashes">Hashes</a>
         <a href="#proof">Proof</a>
         <a href="#how">How</a>
@@ -28,23 +29,36 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">scar · Sibyl Labs hackathon</p>
-        <h1>Selective invalidation after a cold start.</h1>
+        <p class="eyebrow">Team scar · Sibyl Labs Hackathon</p>
+        <h1>Correct one source. Watch what withdraws.</h1>
         <p class="claim">
-          <strong>Correct one source. Kill the process. Fresh cold start.</strong>
-          Dependent briefings withdraw and rebuild. Unaffected control artifact stays
-          <strong>byte-identical</strong>. Powered by Sibyl Memory
-          (<code>sibyl-memory-client==0.8.0</code>).
+          After a cold start, dependent briefings rebuild from Sibyl Memory alone.
+          An unaffected control artifact stays <strong>byte-identical</strong>.
+          <strong>Sibyl Memory is the sole semantic store.</strong> Delete it, and selective invalidation fails.
+          This is not “I remember Monday.”
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://github.com/ronkenx9/retract" rel="noopener noreferrer">View on GitHub</a>
-          <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/download/v0.1.0/retract-g5-cold-start-demo.mp4" rel="noopener noreferrer">Demo video</a>
+          <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/download/v0.1.0/retract-g5-cold-start-demo.mp4" rel="noopener noreferrer">Watch the 60s demo</a>
           <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/tag/v0.1.0" rel="noopener noreferrer">Release v0.1.0</a>
         </div>
         <div class="meta-line">
           <span>MIT license</span>
           <a href="proof.html">Proof ladder →</a>
           <span>Local desk only: 127.0.0.1:8765</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="demo">
+      <div class="wrap">
+        <p class="section-label">G5</p>
+        <h2>Cold start, continuous</h2>
+        <p class="lede">Friday press brief → correct to Monday → kill the worker → fresh process. Press rebuilds. Control hash never moves.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/ronkenx9/retract/releases/download/v0.1.0/retract-g5-cold-start-demo.mp4" rel="noopener noreferrer">Download the demo · mp4</a>
+          <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/tag/v0.1.0" rel="noopener noreferrer">Release v0.1.0</a>
         </div>
       </div>
     </section>
@@ -92,7 +106,7 @@
 
     <section id="proof">
       <div class="wrap">
-        <p class="section-label">G0–G5</p>
+        <p class="section-label">G0–G6</p>
         <h2>Proof ladder</h2>
         <p class="lede">Short labels from the root README. Full paths and artifacts live in the repository.</p>
         <div class="ladder">
@@ -136,6 +150,13 @@
             <div class="ladder-body">
               <strong>Live cold-start</strong>
               <p>G5_PROOF=PASS — live kill and fresh process; demo video in release v0.1.0.</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G6</div>
+            <div class="ladder-body">
+              <strong>Package</strong>
+              <p>Prior Work, claims→evidence, fresh-clone notes, MIT inventory.</p>
             </div>
           </div>
         </div>

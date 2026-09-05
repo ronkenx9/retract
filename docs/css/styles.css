@@ -555,3 +555,18 @@ footer {
 .back:hover {
   color: var(--accent);
 }
+
+
+code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  color: var(--accent-soft);
+  background: var(--bg-inset);
+  padding: 0.1em 0.35em;
+  border: 1px solid var(--border-soft);
+  border-radius: 2px;
+}
+
+.claim code {
+  font-size: 0.82em;
+}
