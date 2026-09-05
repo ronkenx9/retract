@@ -10,3 +10,6 @@ Local only. Captured from `mock/desk.html` via http://127.0.0.1:8765/desk.html.
 | C2 Dispute | `shots/04-dispute.png` | press `8fa56152…`, control `8846d618…`, not established |
 
 UX mock visual PASS for selective invalidation readability. Coding still owns live Sibyl wire + hash proof.
+
+
+**Canonical stills:** `g3/artifacts/screenshots/` (live desk). Mock `g3/shots/` removed from public tree.
