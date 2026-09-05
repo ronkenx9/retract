@@ -1,0 +1,71 @@
+{
+  "phase": "after",
+  "ts": "2026-09-05T14:07:09Z",
+  "sources": [
+    {
+      "id": "3fa6f36b-bbbb-448a-9e27-57b2da507ce6",
+      "name": "novadesk-launch",
+      "version": 2,
+      "day": "Monday",
+      "archived": false,
+      "supersedes": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "status": "active",
+      "claim": "NovaDesk public launch is on Monday."
+    },
+    {
+      "id": "09bc7eae-ce0c-4a19-ab22-764a3ae6acc2",
+      "archived_id": "2f612acf-7a02-4460-9853-55796e48610b",
+      "name": "novadesk-launch",
+      "version": 1,
+      "day": "Friday",
+      "archived": true,
+      "supersedes": null,
+      "source_version_id": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "status": "active",
+      "archive_reason": "supersede Friday\u2192Monday"
+    }
+  ],
+  "claims": [
+    {
+      "id": "047f26f4-515a-4403-b04f-212c1174bdc2",
+      "artifact": "press-brief",
+      "source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "status": "active",
+      "quote": "NovaDesk public launch is on Monday."
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "press-brief",
+      "depends_on_source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "content_sha256": "37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03",
+      "text": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: Monday\nHeadline: NovaDesk launches to the public on Monday.\nCall to action: Mark your calendar for Monday.\n",
+      "claim_ids": [
+        "press-brief-cites-launch"
+      ],
+      "version": 2
+    },
+    {
+      "name": "company-blurb",
+      "depends_on_source_version_id": null,
+      "content_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+      "text": "COMPANY BLURB \u2014 NovaDesk\nNovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.\nMission: calm desks, clear calendars.\n",
+      "claim_ids": [],
+      "version": 1
+    }
+  ],
+  "corrections": [
+    {
+      "id": "883fc9e5-e56d-4f0f-85c1-d764b2b7f6ad",
+      "name": "friday-to-monday-approved",
+      "from_version": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "to_version": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "decision": "approved",
+      "reason": "Calendar confirmed Monday.",
+      "status": "approved"
+    }
+  ],
+  "control_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+  "press_sha256": "37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03"
+}

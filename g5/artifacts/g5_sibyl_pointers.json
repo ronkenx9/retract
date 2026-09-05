@@ -1,0 +1,168 @@
+{
+  "run_id": "b21262b5-d165-4b84-8889-72b72d6c6e53",
+  "correct_pid": 172906,
+  "db_path": "/workspace/retract/g5/memory.db",
+  "tenant_id": "a5555555-b555-c555-d555-e55555555555",
+  "before": {
+    "phase": "before_correct_read",
+    "db_path": "/workspace/retract/g5/memory.db",
+    "get_entity_call_sites": [
+      {
+        "fn": "memory_io.read_site_source",
+        "calls": "memory.get_entity(CAT_SOURCE, NAME_LAUNCH)",
+        "category": "source_version",
+        "name": "novadesk-launch"
+      },
+      {
+        "fn": "memory_io.read_site_artifact",
+        "calls": "memory.get_entity(CAT_ARTIFACT, name)",
+        "category": "artifact",
+        "names": [
+          "press-brief",
+          "company-blurb"
+        ]
+      },
+      {
+        "fn": "memory_io.read_site_claim",
+        "calls": "memory.get_entity(CAT_CLAIM, name)",
+        "category": "claim",
+        "names": [
+          "press-brief-cites-launch"
+        ]
+      },
+      {
+        "fn": "memory_io.read_site_correction",
+        "calls": "memory.get_entity(CAT_CORRECTION, name)",
+        "category": "correction",
+        "names": [
+          "friday-to-monday-approved"
+        ]
+      }
+    ],
+    "entities": {
+      "novadesk-launch": {
+        "id": "09bc7eae-ce0c-4a19-ab22-764a3ae6acc2",
+        "body_source_version_id": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+        "day": "Friday",
+        "status": "active",
+        "supersedes": null
+      },
+      "press-brief": {
+        "id": "195d4206-d0df-40ee-b893-eab84dd05e52",
+        "depends_on_source_version_id": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+        "content_sha256": "746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096",
+        "version": 1
+      },
+      "company-blurb": {
+        "id": "1ac23775-a896-4959-aa47-a6d9ec149bec",
+        "depends_on_source_version_id": null,
+        "content_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+        "version": 1
+      },
+      "press-brief-cites-launch": {
+        "id": "047f26f4-515a-4403-b04f-212c1174bdc2",
+        "source_version_id": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+        "quote": "NovaDesk public launch is on Friday."
+      },
+      "friday-to-monday-approved": {
+        "error": "entity correction/friday-to-monday-approved not found for tenant a5555555-b555-c555-d555-e55555555555"
+      }
+    },
+    "source_version_ids": {
+      "live": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "artifact:press-brief": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "claim": "64922a2e-7203-4726-8b0e-8aafe3330a8a"
+    },
+    "archived_sources": []
+  },
+  "after": {
+    "phase": "after_correct",
+    "db_path": "/workspace/retract/g5/memory.db",
+    "get_entity_call_sites": [
+      {
+        "fn": "memory_io.read_site_source",
+        "calls": "memory.get_entity(CAT_SOURCE, NAME_LAUNCH)",
+        "category": "source_version",
+        "name": "novadesk-launch"
+      },
+      {
+        "fn": "memory_io.read_site_artifact",
+        "calls": "memory.get_entity(CAT_ARTIFACT, name)",
+        "category": "artifact",
+        "names": [
+          "press-brief",
+          "company-blurb"
+        ]
+      },
+      {
+        "fn": "memory_io.read_site_claim",
+        "calls": "memory.get_entity(CAT_CLAIM, name)",
+        "category": "claim",
+        "names": [
+          "press-brief-cites-launch"
+        ]
+      },
+      {
+        "fn": "memory_io.read_site_correction",
+        "calls": "memory.get_entity(CAT_CORRECTION, name)",
+        "category": "correction",
+        "names": [
+          "friday-to-monday-approved"
+        ]
+      }
+    ],
+    "entities": {
+      "novadesk-launch": {
+        "id": "3fa6f36b-bbbb-448a-9e27-57b2da507ce6",
+        "body_source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+        "day": "Monday",
+        "status": "active",
+        "supersedes": "64922a2e-7203-4726-8b0e-8aafe3330a8a"
+      },
+      "press-brief": {
+        "id": "195d4206-d0df-40ee-b893-eab84dd05e52",
+        "depends_on_source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+        "content_sha256": "37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03",
+        "version": 2
+      },
+      "company-blurb": {
+        "id": "1ac23775-a896-4959-aa47-a6d9ec149bec",
+        "depends_on_source_version_id": null,
+        "content_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+        "version": 1
+      },
+      "press-brief-cites-launch": {
+        "id": "047f26f4-515a-4403-b04f-212c1174bdc2",
+        "source_version_id": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+        "quote": "NovaDesk public launch is on Monday."
+      },
+      "friday-to-monday-approved": {
+        "id": "883fc9e5-e56d-4f0f-85c1-d764b2b7f6ad",
+        "from_version": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+        "to_version": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+        "decision": "approved"
+      }
+    },
+    "source_version_ids": {
+      "live": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "artifact:press-brief": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "claim": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95",
+      "correction_from": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+      "correction_to": "7b1867d6-9c12-4eb3-a46e-5e36305f2d95"
+    },
+    "archived_sources": [
+      {
+        "archived_id": "2f612acf-7a02-4460-9853-55796e48610b",
+        "original_entity_id": "09bc7eae-ce0c-4a19-ab22-764a3ae6acc2",
+        "source_version_id": "64922a2e-7203-4726-8b0e-8aafe3330a8a",
+        "day": "Friday",
+        "archive_reason": "supersede Friday\u2192Monday"
+      }
+    ]
+  },
+  "locked_hashes": {
+    "control_always": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+    "press_friday": "746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096",
+    "press_monday": "37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03"
+  }
+}

@@ -1,0 +1,58 @@
+===== RETRACT G1 UNEDITED TRACE =====
+host=cursor date=2026-09-05T12:56:38Z
+python=/workspace/retract/.venv/bin/python 0.8.0
+
+----- PROCESS 1: SEED (then EXIT/KILL) -----
+PHASE SEED @ 2026-09-05T12:56:38Z
+  db=/workspace/retract/g1/memory.db
+  tenant_id=a1111111-b222-c333-d444-e55555555555
+  pid=121944
+  schema_version=4
+  wrote source launch-note day=Friday version=1 id=6f5e5765-8558-4b02-9d3e-d87ee811f62d
+  wrote dependent artifact press-brief id=c5fef1e2-df23-4289-9eec-019dfea4a714
+  projection -> /workspace/retract/g1/artifacts/projections/press-brief.txt
+  wrote control artifact company-blurb id=590679ec-8268-489c-a368-2d488d766b0f
+  projection -> /workspace/retract/g1/artifacts/projections/company-blurb.txt
+  journal event id=56a6885e-77c4-4789-8f78-8b08dd9c1725
+  seed_snapshot -> /workspace/retract/g1/artifacts/seed_snapshot.json
+PHASE SEED DONE — process will exit (KILL)
+seed_exit=0
+seed_pid_gone=yes (process exited)
+
+----- PROCESS 2: COLD_START (fresh PID, same DB) -----
+PHASE COLD_START @ 2026-09-05T12:56:38Z
+  db=/workspace/retract/g1/memory.db
+  tenant_id=a1111111-b222-c333-d444-e55555555555
+  pid=121945
+  note: no prior Python state; empty chat; reconstruct from Sibyl only
+  schema_version=4
+  READ source day='Friday' version=1 id=6f5e5765-8558-4b02-9d3e-d87ee811f62d
+  READ press-brief (before) version=1
+  READ company-blurb (control) version=1
+  ARCHIVED old source archived_id=1671e899-6e92-42f3-9715-2b80a2b00bdf
+  wrote corrected source day=Monday version=2 id=e3fd1302-2e0b-4d38-80b9-d51048f17aa3
+  regenerated dependent press-brief id=c5fef1e2-df23-4289-9eec-019dfea4a714 -> /workspace/retract/g1/artifacts/projections/press-brief.txt
+  control company-blurb UNCHANGED -> /workspace/retract/g1/artifacts/projections/company-blurb.txt
+  result -> /workspace/retract/g1/artifacts/cold_start_result.json
+PHASE RESULT
+  source: Friday -> Monday
+  press_changed=True
+  control_unchanged=True
+--- ARTIFACT BEFORE ---
+PRESS BRIEF — NovaDesk
+Embargo lifts: Friday
+Headline: NovaDesk launches to the public on Friday.
+Call to action: Mark your calendar for Friday.
+--- ARTIFACT AFTER ---
+PRESS BRIEF — NovaDesk
+Embargo lifts: Monday
+Headline: NovaDesk launches to the public on Monday.
+Call to action: Mark your calendar for Monday.
+--- CONTROL (unchanged) ---
+COMPANY BLURB — NovaDesk
+NovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.
+Mission: calm desks, clear calendars.
+G1_PROOF=PASS
+cold_start_exit=0
+
+===== END TRACE =====

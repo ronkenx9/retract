@@ -1,0 +1,13 @@
+{
+  "phase": "RESULT",
+  "ts": "2026-09-05T12:57:16Z",
+  "source_before": "Friday",
+  "source_after": "Monday",
+  "press_before": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: Friday\nHeadline: NovaDesk launches to the public on Friday.\nCall to action: Mark your calendar for Friday.\n",
+  "press_after": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: Monday\nHeadline: NovaDesk launches to the public on Monday.\nCall to action: Mark your calendar for Monday.\n",
+  "control_before": "COMPANY BLURB \u2014 NovaDesk\nNovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.\nMission: calm desks, clear calendars.\n",
+  "control_after": "COMPANY BLURB \u2014 NovaDesk\nNovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.\nMission: calm desks, clear calendars.\n",
+  "press_changed": true,
+  "control_unchanged": true,
+  "pid": 122657
+}

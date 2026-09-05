@@ -1,0 +1,94 @@
+===== RETRACT G2 UNEDITED TRACE =====
+host=cursor date=2026-09-05T13:01:58Z
+python=/workspace/retract/.venv/bin/python 0.8.0
+
+===== PATH A: clean → seed → correct =====
+----- PROCESS 1: SEED (then EXIT/KILL) -----
+PHASE SEED @ 2026-09-05T13:01:58Z
+  db=/workspace/retract/g2/memory.db
+  tenant_id=c2222222-b222-c333-d444-e55555555555
+  pid=129976
+  schema_version=4
+  wrote source v1 day=Friday svid=5858bd57-af3a-4f18-936b-1dbb9dea065a id=ef4424dc-41ad-4076-9c92-3cbd854631af
+  wrote claim press-brief-cites-launch -> svid=5858bd57-af3a-4f18-936b-1dbb9dea065a id=6cf0d9a7-4060-43ed-8ee8-a6af29909c07
+  wrote artifact press-brief citing svid=5858bd57-af3a-4f18-936b-1dbb9dea065a id=0a60d9a3-9a86-4cfd-9652-8f1b9dba05c6
+  projection -> /workspace/retract/g2/artifacts/projections/press-brief.txt
+  wrote control company-blurb source_version_ids=[] id=fe7e8684-b317-4263-9298-f3df423e6f93
+  projection -> /workspace/retract/g2/artifacts/projections/company-blurb.txt
+  journal SEED event id=90536d05-93ee-4d62-9431-26b9240330bd
+  before_graph -> /workspace/retract/g2/artifacts/before_graph.json
+CONTROL_HASH_BEFORE=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+PRESS_HASH_BEFORE=746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096
+PHASE SEED DONE — process will exit (KILL)
+seed_pid_gone=yes (process exited)
+
+----- PROCESS 2: CORRECT (fresh PID, same DB) -----
+PHASE CORRECT @ 2026-09-05T13:01:59Z
+  db=/workspace/retract/g2/memory.db
+  tenant_id=c2222222-b222-c333-d444-e55555555555
+  pid=129977
+  schema_version=4
+  live source day=Friday version=1 svid=5858bd57-af3a-4f18-936b-1dbb9dea065a
+  archived source reason=supersede Friday→Monday archived_id=None
+  wrote source v2 day=Monday svid=35d78eab-4c5b-4b4b-bf6a-3a684dc2230b supersedes=5858bd57-af3a-4f18-936b-1dbb9dea065a id=0672ea41-73b0-475f-96d4-73114c41688e
+  wrote correction decision=approved id=836c1eb0-c412-4237-82b2-5331241e30fd
+  updated claim press-brief-cites-launch -> svid=35d78eab-4c5b-4b4b-bf6a-3a684dc2230b
+  invalidated dependents: ['press-brief']
+  regenerated press-brief citing new svid=35d78eab-4c5b-4b4b-bf6a-3a684dc2230b
+  after_graph -> /workspace/retract/g2/artifacts/after_graph.json
+CONTROL_HASH_BEFORE=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+CONTROL_HASH_AFTER=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+PRESS_HASH_BEFORE=746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096
+PRESS_HASH_AFTER=37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03
+  supersedes_trail_ok=True
+G2_PROOF=PASS
+  result -> /workspace/retract/g2/artifacts/g2_result.json
+PATH_A=PASS
+
+===== PATH B: clean → seed → dispute =====
+----- PROCESS 1: SEED (then EXIT/KILL) -----
+PHASE SEED @ 2026-09-05T13:01:59Z
+  db=/workspace/retract/g2/memory.db
+  tenant_id=c2222222-b222-c333-d444-e55555555555
+  pid=129982
+  schema_version=4
+  wrote source v1 day=Friday svid=81a564da-da25-4e56-9c7f-15160e1a6fc2 id=92e1a768-e29a-4294-9f23-67c6245616d9
+  wrote claim press-brief-cites-launch -> svid=81a564da-da25-4e56-9c7f-15160e1a6fc2 id=f7d82b60-ee5b-47e1-bca8-bfe962504e34
+  wrote artifact press-brief citing svid=81a564da-da25-4e56-9c7f-15160e1a6fc2 id=24f7d206-8b99-4fba-bee7-382268765498
+  projection -> /workspace/retract/g2/artifacts/projections/press-brief.txt
+  wrote control company-blurb source_version_ids=[] id=a50e61c1-9cf0-441b-a50f-a3a15ec4511a
+  projection -> /workspace/retract/g2/artifacts/projections/company-blurb.txt
+  journal SEED event id=35241a4e-7203-4ba0-a930-bbe8a4c93211
+  before_graph -> /workspace/retract/g2/artifacts/before_graph.json
+CONTROL_HASH_BEFORE=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+PRESS_HASH_BEFORE=746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096
+PHASE SEED DONE — process will exit (KILL)
+seed_pid_gone=yes (process exited)
+
+----- PROCESS 2: DISPUTE (fresh PID, same DB) -----
+PHASE DISPUTE @ 2026-09-05T13:01:59Z
+  db=/workspace/retract/g2/memory.db
+  tenant_id=c2222222-b222-c333-d444-e55555555555
+  pid=129983
+  schema_version=4
+  live source day=Friday version=1 svid=81a564da-da25-4e56-9c7f-15160e1a6fc2
+  archived source reason=dispute Friday→not_established archived_id=None
+  wrote source v2 day=null status=not_established svid=1a201dee-0e70-46bd-b551-64023d5ca721 supersedes=81a564da-da25-4e56-9c7f-15160e1a6fc2 id=2803fe91-c704-4164-a29d-13ce32037025
+  wrote correction decision=disputed id=44af3585-4f0c-4400-9795-0ce9bb647305
+  updated claim press-brief-cites-launch status=not_established -> svid=1a201dee-0e70-46bd-b551-64023d5ca721
+  invalidated dependents: ['press-brief']
+  regenerated press-brief -> not_established text citing svid=1a201dee-0e70-46bd-b551-64023d5ca721
+  dispute_graph -> /workspace/retract/g2/artifacts/dispute_graph.json
+CONTROL_HASH_BEFORE=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+CONTROL_HASH_AFTER=8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7
+PRESS_HASH_BEFORE=746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096
+PRESS_HASH_AFTER=8fa56152e8f681171fb82e8cd186bbd23e9b98850a703af4687df4023624cb67
+G2_DISPUTE_PROOF=PASS
+  not_established_press_text=True
+  control_unchanged=True
+  result -> /workspace/retract/g2/artifacts/g2_dispute_result.json
+PATH_B=PASS
+
+===== OVERALL =====
+G2_PROOF=PASS
+===== END TRACE =====

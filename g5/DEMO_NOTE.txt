@@ -1,0 +1,1 @@
+G5 demo cut local only. Uses G3 desk screens + G5_PROOF=PASS trace PIDs 166784→166785. Do not publish.

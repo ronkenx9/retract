@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+*.db-wal
+*.db-shm
+*.tgz
+.DS_Store
+.env
+.env.*
+*.pem
+secrets/
+.token
+bearer*
+**/node_modules/
+g5-demo/

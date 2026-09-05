@@ -1,0 +1,72 @@
+# RETRACT G1 TRACE — unedited capture
+# started 2026-09-05T12:57:16Z (UTC; WAT=UTC+1)
+# runner=/workspace/retract/g1/run_g1.py
+
+PHASE RUNNER_START @ 2026-09-05T12:57:16Z commit=f3eef817e0fd
+  g1_root=/workspace/retract/g1
+  db_path=/workspace/retract/g1/memory.db
+  python=/workspace/retract/.venv/bin/python
+
+==== SPAWN SEED @ 2026-09-05T12:57:16Z commit=bcfa68419f8c ====
+  cmd=['/workspace/retract/.venv/bin/python', '/workspace/retract/g1/seed.py']
+  parent_pid=122655
+PHASE SEED @ 2026-09-05T12:57:16Z
+  db=/workspace/retract/g1/memory.db
+  tenant_id=a1111111-b222-c333-d444-e55555555555
+  pid=122656
+  schema_version=4
+  wrote source launch-note day=Friday version=1 id=62bab171-e6a4-4e3b-abaf-4651bc25b9b0
+  wrote dependent artifact press-brief id=3bc6b5a3-b195-48ac-804a-1014f8b5bd67
+  projection -> /workspace/retract/g1/artifacts/projections/press-brief.txt
+  wrote control artifact company-blurb id=84cc0921-19c4-4306-9906-1519d92ad87e
+  projection -> /workspace/retract/g1/artifacts/projections/company-blurb.txt
+  journal event id=9e8749ec-31ff-4ae9-99c0-40a15747d6d5
+  seed_snapshot -> /workspace/retract/g1/artifacts/seed_snapshot.json
+PHASE SEED DONE — process will exit (KILL)
+==== EXIT SEED rc=0 child_pid=122656 @ 2026-09-05T12:57:16Z ====
+
+PHASE KILL @ 2026-09-05T12:57:16Z commit=124d2772c7ca
+  seed child process has fully exited; no shared Python state remains
+  sleeping 0.5s to make process boundary obvious in transcript
+
+==== SPAWN COLD_START @ 2026-09-05T12:57:16Z commit=e4f7922b5a81 ====
+  cmd=['/workspace/retract/.venv/bin/python', '/workspace/retract/g1/cold_start.py']
+  parent_pid=122655
+PHASE COLD_START @ 2026-09-05T12:57:16Z
+  db=/workspace/retract/g1/memory.db
+  tenant_id=a1111111-b222-c333-d444-e55555555555
+  pid=122657
+  note: no prior Python state; empty chat; reconstruct from Sibyl only
+  schema_version=4
+  READ source day='Friday' version=1 id=62bab171-e6a4-4e3b-abaf-4651bc25b9b0
+  READ press-brief (before) version=1
+  READ company-blurb (control) version=1
+  ARCHIVED old source archived_id=ce5a6795-a54d-4fb3-9f72-a1c33c740d19
+  wrote corrected source day=Monday version=2 id=afd639f5-0018-4d71-aa17-3485f39612df
+  regenerated dependent press-brief id=3bc6b5a3-b195-48ac-804a-1014f8b5bd67 -> /workspace/retract/g1/artifacts/projections/press-brief.txt
+  control company-blurb UNCHANGED -> /workspace/retract/g1/artifacts/projections/company-blurb.txt
+  result -> /workspace/retract/g1/artifacts/cold_start_result.json
+PHASE RESULT
+  source: Friday -> Monday
+  press_changed=True
+  control_unchanged=True
+--- ARTIFACT BEFORE ---
+PRESS BRIEF — NovaDesk
+Embargo lifts: Friday
+Headline: NovaDesk launches to the public on Friday.
+Call to action: Mark your calendar for Friday.
+--- ARTIFACT AFTER ---
+PRESS BRIEF — NovaDesk
+Embargo lifts: Monday
+Headline: NovaDesk launches to the public on Monday.
+Call to action: Mark your calendar for Monday.
+--- CONTROL (unchanged) ---
+COMPANY BLURB — NovaDesk
+NovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.
+Mission: calm desks, clear calendars.
+G1_PROOF=PASS
+==== EXIT COLD_START rc=0 child_pid=122657 @ 2026-09-05T12:57:16Z ====
+
+PHASE RUNNER_END @ 2026-09-05T12:57:16Z commit=a48ad00f4ec3
+
+# finished 2026-09-05T12:57:16Z exit=0

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RETRACT G3 — Editorial desk mock</title>
+<style>
+  :root {
+    --bg: #0E0F10;
+    --ink: #F2EFE8;
+    --mute: #9A958C;
+    --metal: #C4B59A;
+    --glass: rgba(255,255,255,0.05);
+    --line: rgba(255,255,255,0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font: 15px/1.45 "IBM Plex Sans", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+  }
+  header.app {
+    max-width: 720px; margin: 0 auto; padding: 28px 20px 8px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  }
+  header.app h1 { font: 600 13px/1 "IBM Plex Sans", sans-serif; letter-spacing: 0.28em; margin: 0; }
+  header.app p { margin: 6px 0 0; color: var(--mute); font-size: 14px; }
+  .tabs {
+    max-width: 720px; margin: 0 auto; padding: 0 20px 12px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .tabs button {
+    background: transparent; color: var(--mute); border: 1px solid var(--line);
+    border-radius: 999px; padding: 8px 14px; cursor: pointer; font: inherit;
+  }
+  .tabs button.on { color: var(--bg); background: var(--ink); border-color: var(--ink); }
+  main { max-width: 720px; margin: 0 auto; padding: 8px 20px 48px; }
+  .screen { display: none; }
+  .screen.on { display: block; }
+  .band-label {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--mute); margin: 20px 0 8px;
+  }
+  .card {
+    background: var(--glass); border: 1px solid var(--line); border-radius: 16px;
+    padding: 16px 18px; margin-bottom: 10px;
+  }
+  .card.hot { border-color: var(--metal); }
+  .card .eye { color: var(--mute); font-size: 12px; margin-bottom: 6px; }
+  .card .claim { font-size: 17px; margin: 0 0 8px; }
+  .card pre {
+    margin: 0; white-space: pre-wrap; font: 13px/1.5 "IBM Plex Mono", ui-monospace, monospace;
+    color: var(--ink);
+  }
+  .hash {
+    display: inline-block; margin-top: 10px; font: 12px/1 "IBM Plex Mono", monospace;
+    color: var(--metal); border: 1px solid rgba(196,181,154,0.35);
+    border-radius: 999px; padding: 4px 10px;
+  }
+  .status { color: var(--mute); font-size: 12px; margin-bottom: 6px; }
+  .status.ok { color: #A8C3A0; }
+  .status.rebuild { color: var(--metal); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 44px; padding: 0 18px; border-radius: 12px; border: 0;
+    font: 600 14px/1 inherit; cursor: pointer;
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .field { display: block; margin: 10px 0; }
+  .field span { display: block; color: var(--mute); font-size: 12px; margin-bottom: 4px; }
+  .field input, .field textarea {
+    width: 100%; background: #151617; border: 1px solid var(--line); border-radius: 10px;
+    color: var(--ink); padding: 10px 12px; font: inherit;
+  }
+  .diff del { color: var(--mute); }
+  .diff ins { color: var(--metal); text-decoration: none; font-weight: 600; }
+  .event {
+    margin: 8px 0 0; padding: 10px 12px; border-left: 2px solid var(--metal);
+    color: var(--mute); font-size: 13px;
+  }
+  .archive { color: var(--mute); font-size: 12px; margin-top: 8px; }
+  .fail {
+    display: none; margin: 12px 0; padding: 12px; border: 1px solid #8a3a3a;
+    color: #e8b4b4; border-radius: 12px;
+  }
+  .pair { display: grid; gap: 10px; }
+  @media (min-width: 700px) { .pair { grid-template-columns: 1fr 1fr; } }
+  .muted { opacity: 0.72; }
+  footer.note {
+    max-width: 720px; margin: 0 auto; padding: 0 20px 40px;
+    color: var(--mute); font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <header class="app">
+    <div>
+      <h1>RETRACT</h1>
+      <p>Correct the source. Watch what withdraws.</p>
+    </div>
+    <button class="btn primary" type="button" onclick="show('correct')">Correct source</button>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button type="button" class="on" data-tab="desk" onclick="show('desk')">A Desk</button>
+    <button type="button" data-tab="correct" onclick="show('correct')">B Correct</button>
+    <button type="button" data-tab="after" onclick="show('after')">C1 Approved</button>
+    <button type="button" data-tab="dispute" onclick="show('dispute')">C2 Dispute</button>
+  </div>
+
+  <main>
+    <!-- A DESK -->
+    <section class="screen on" id="desk">
+      <div class="band-label">Source</div>
+      <article class="card hot">
+        <div class="eye">novadesk-launch · v1 · active · 5858bd57…</div>
+        <p class="claim">NovaDesk public launch is on Friday.</p>
+      </article>
+
+      <div class="band-label">Generated</div>
+      <article class="card">
+        <div class="status">press-brief · depends on launch</div>
+        <pre>Embargo lifts: Friday
+Headline: NovaDesk launches to the public on Friday.
+Call to action: Mark your calendar for Friday.</pre>
+        <span class="hash" title="746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096">746e9d25…</span>
+      </article>
+      <article class="card">
+        <div class="status">company-blurb · Control · no launch-day claim</div>
+        <pre>NovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.
+Mission: calm desks, clear calendars.</pre>
+        <span class="hash" title="8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7">8846d618…</span>
+      </article>
+    </section>
+
+    <!-- B CORRECT -->
+    <section class="screen" id="correct">
+      <div class="band-label">Correct source</div>
+      <p style="color:var(--mute);margin:0 0 12px">Old claim stays readable. Dependents that cite it will withdraw.</p>
+      <div class="pair">
+        <article class="card muted">
+          <div class="eye">Current · v1 · 5858bd57…</div>
+          <p class="claim">NovaDesk public launch is on Friday.</p>
+        </article>
+        <article class="card hot">
+          <div class="eye">Proposed</div>
+          <label class="field"><span>Day</span><input value="Monday" readonly /></label>
+          <p class="claim">NovaDesk public launch is on Monday.</p>
+          <label class="field"><span>Reason</span><input value="Calendar confirmed Monday." readonly /></label>
+        </article>
+      </div>
+
+      <div class="band-label">What will change</div>
+      <article class="card">
+        <div class="status">press-brief · hash moves off 746e9d25…</div>
+        <pre class="diff">Embargo lifts: <del>Friday</del> <ins>Monday</ins>
+Headline: NovaDesk launches to the public on <del>Friday</del> <ins>Monday</ins>.
+Call to action: Mark your calendar for <del>Friday</del> <ins>Monday</ins>.</pre>
+      </article>
+
+      <div class="band-label">What will not change</div>
+      <article class="card">
+        <div class="status ok">company-blurb · hash unchanged</div>
+        <span class="hash" title="8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7">8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7</span>
+        <p style="color:var(--mute);font-size:13px;margin:10px 0 0">Control stays byte-identical.</p>
+      </article>
+
+      <div class="row">
+        <button class="btn primary" type="button" onclick="show('after')">Apply correction</button>
+        <button class="btn ghost" type="button" onclick="show('dispute')">Dispute instead</button>
+      </div>
+    </section>
+
+    <!-- C1 APPROVED -->
+    <section class="screen" id="after">
+      <p class="event">correction approved · Friday→Monday · press-brief rebuilt · company-blurb control</p>
+      <div class="band-label">Source</div>
+      <article class="card hot">
+        <div class="eye">novadesk-launch · v2 · active · supersedes 5858bd57…</div>
+        <p class="claim">NovaDesk public launch is on Monday.</p>
+        <div class="archive">v1 · Friday · archived · supersede Friday→Monday</div>
+      </article>
+      <div class="band-label">Generated</div>
+      <article class="card">
+        <div class="status rebuild">press-brief · rebuilt</div>
+        <pre>Embargo lifts: Monday
+Headline: NovaDesk launches to the public on Monday.
+Call to action: Mark your calendar for Monday.</pre>
+        <span class="hash" title="37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03">37437dcd…</span>
+      </article>
+      <article class="card">
+        <div class="status ok">company-blurb · unchanged</div>
+        <pre>NovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.
+Mission: calm desks, clear calendars.</pre>
+        <span class="hash" title="8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7">8846d618…</span>
+      </article>
+      <div class="fail" id="fail-approved">Proof failed · selective invalidation broken.</div>
+    </section>
+
+    <!-- C2 DISPUTE -->
+    <section class="screen" id="dispute">
+      <p class="event">correction disputed · claim not_established · press-brief rebuilt · company-blurb control</p>
+      <div class="band-label">Source</div>
+      <article class="card hot">
+        <div class="eye">novadesk-launch · v2 · not established</div>
+        <p class="claim">NovaDesk public launch day is not established.</p>
+        <div class="archive">v1 · Friday · archived · dispute Friday→not_established</div>
+      </article>
+      <div class="band-label">Generated</div>
+      <article class="card">
+        <div class="status rebuild">press-brief · rebuilt (not “no regen”)</div>
+        <pre>Embargo lifts: not established
+Headline: NovaDesk public launch day is not established.
+Call to action: Do not schedule outreach until day is established.</pre>
+        <span class="hash" title="8fa56152e8f681171fb82e8cd186bbd23e9b98850a703af4687df4023624cb67">8fa56152…</span>
+      </article>
+      <article class="card">
+        <div class="status ok">company-blurb · unchanged</div>
+        <pre>NovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.
+Mission: calm desks, clear calendars.</pre>
+        <span class="hash" title="8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7">8846d618…</span>
+      </article>
+    </section>
+  </main>
+
+  <footer class="note">Local G3 mock. Passages and hashes from G2 graphs. Do not publish.</footer>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.screen').forEach(el => el.classList.toggle('on', el.id === id));
+  document.querySelectorAll('.tabs button').forEach(btn => {
+    btn.classList.toggle('on', btn.getAttribute('data-tab') === id);
+  });
+}
+</script>
+</body>
+</html>

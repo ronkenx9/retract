@@ -1,0 +1,71 @@
+{
+  "phase": "dispute",
+  "ts": "2026-09-05T13:01:59Z",
+  "sources": [
+    {
+      "id": "2803fe91-c704-4164-a29d-13ce32037025",
+      "name": "novadesk-launch",
+      "version": 2,
+      "day": null,
+      "archived": false,
+      "supersedes": "81a564da-da25-4e56-9c7f-15160e1a6fc2",
+      "source_version_id": "1a201dee-0e70-46bd-b551-64023d5ca721",
+      "status": "not_established",
+      "claim": "NovaDesk public launch day is not established."
+    },
+    {
+      "id": "92e1a768-e29a-4294-9f23-67c6245616d9",
+      "archived_id": "b32aa022-54c7-41f6-b4af-dcceb55312a4",
+      "name": "novadesk-launch",
+      "version": 1,
+      "day": "Friday",
+      "archived": true,
+      "supersedes": null,
+      "source_version_id": "81a564da-da25-4e56-9c7f-15160e1a6fc2",
+      "status": "active",
+      "archive_reason": "dispute Friday\u2192not_established"
+    }
+  ],
+  "claims": [
+    {
+      "id": "f7d82b60-ee5b-47e1-bca8-bfe962504e34",
+      "artifact": "press-brief",
+      "source_version_id": "1a201dee-0e70-46bd-b551-64023d5ca721",
+      "status": "not_established",
+      "quote": "NovaDesk public launch day is not established."
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "press-brief",
+      "depends_on_source_version_id": "1a201dee-0e70-46bd-b551-64023d5ca721",
+      "content_sha256": "8fa56152e8f681171fb82e8cd186bbd23e9b98850a703af4687df4023624cb67",
+      "text": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: not established\nHeadline: NovaDesk public launch day is not established.\nCall to action: Do not schedule outreach until day is established.\n",
+      "claim_ids": [
+        "press-brief-cites-launch"
+      ],
+      "version": 2
+    },
+    {
+      "name": "company-blurb",
+      "depends_on_source_version_id": null,
+      "content_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+      "text": "COMPANY BLURB \u2014 NovaDesk\nNovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.\nMission: calm desks, clear calendars.\n",
+      "claim_ids": [],
+      "version": 1
+    }
+  ],
+  "corrections": [
+    {
+      "id": "44af3585-4f0c-4400-9795-0ce9bb647305",
+      "name": "friday-to-monday-disputed",
+      "from_version": "81a564da-da25-4e56-9c7f-15160e1a6fc2",
+      "to_version": "1a201dee-0e70-46bd-b551-64023d5ca721",
+      "decision": "disputed",
+      "reason": "Launch day disputed; treat as not established.",
+      "status": "not_established"
+    }
+  ],
+  "control_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+  "press_sha256": "8fa56152e8f681171fb82e8cd186bbd23e9b98850a703af4687df4023624cb67"
+}

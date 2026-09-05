@@ -1,0 +1,50 @@
+G4 ADVERSARIAL SUITE @ 2026-09-05T14:02:56Z
+  g4_root=/workspace/retract/g4
+  db_a=/workspace/retract/g4/memory_a.db
+  db_b=/workspace/retract/g4/memory_b.db
+  cases=6
+
+=== CASE stale_ui_projection_cache @ 2026-09-05T14:02:56Z ===
+  RESULT stale_ui_projection_cache=PASS
+    sibyl_day=Monday
+    cache_day=Friday
+    stale_detected=True
+
+=== CASE repeated_corrections @ 2026-09-05T14:02:56Z ===
+  RESULT repeated_corrections=PASS
+    live_day=Tuesday
+    control_unchanged=True
+
+=== CASE conflicting_sources @ 2026-09-05T14:02:56Z ===
+  RESULT conflicting_sources=PASS
+    refused_regen=True
+    control_unchanged=True
+
+=== CASE tenant_separation @ 2026-09-05T14:02:56Z ===
+  RESULT tenant_separation=PASS
+    tenant_a_day=Monday
+    tenant_b_day_same_db=Friday
+
+=== CASE deleted_memory_litmus @ 2026-09-05T14:02:56Z ===
+  RESULT deleted_memory_litmus=PASS
+    normal_pass=True
+    blocked_pass=True
+    missing_pass=True
+
+=== CASE concurrent_requests @ 2026-09-05T14:02:56Z ===
+  RESULT concurrent_requests=PASS
+    final_live_day=Monday
+
+results -> /workspace/retract/g4/artifacts/g4_results.json
+
+PER-CASE SUMMARY
+case                             result
+----------------------------------------
+stale_ui_projection_cache        PASS  
+repeated_corrections             PASS  
+conflicting_sources              PASS  
+tenant_separation                PASS  
+deleted_memory_litmus            PASS  
+concurrent_requests              PASS  
+----------------------------------------
+G4_PROOF=PASS

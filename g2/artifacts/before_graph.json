@@ -1,0 +1,49 @@
+{
+  "phase": "before",
+  "ts": "2026-09-05T13:01:58Z",
+  "sources": [
+    {
+      "id": "ef4424dc-41ad-4076-9c92-3cbd854631af",
+      "name": "novadesk-launch",
+      "version": 1,
+      "day": "Friday",
+      "archived": false,
+      "supersedes": null,
+      "source_version_id": "5858bd57-af3a-4f18-936b-1dbb9dea065a",
+      "status": "active",
+      "claim": "NovaDesk public launch is on Friday."
+    }
+  ],
+  "claims": [
+    {
+      "id": "6cf0d9a7-4060-43ed-8ee8-a6af29909c07",
+      "artifact": "press-brief",
+      "source_version_id": "5858bd57-af3a-4f18-936b-1dbb9dea065a",
+      "status": "active",
+      "quote": "NovaDesk public launch is on Friday."
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "company-blurb",
+      "depends_on_source_version_id": null,
+      "content_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+      "text": "COMPANY BLURB \u2014 NovaDesk\nNovaDesk is a fictional productivity suite owned by the RETRACT demo corpus.\nMission: calm desks, clear calendars.\n",
+      "claim_ids": [],
+      "version": 1
+    },
+    {
+      "name": "press-brief",
+      "depends_on_source_version_id": "5858bd57-af3a-4f18-936b-1dbb9dea065a",
+      "content_sha256": "746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096",
+      "text": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: Friday\nHeadline: NovaDesk launches to the public on Friday.\nCall to action: Mark your calendar for Friday.\n",
+      "claim_ids": [
+        "press-brief-cites-launch"
+      ],
+      "version": 1
+    }
+  ],
+  "corrections": [],
+  "control_sha256": "8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7",
+  "press_sha256": "746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096"
+}
