@@ -5,7 +5,7 @@ Assumes a clean Linux/macOS machine with Python ≥ 3.10. No bearer tokens requi
 ## 1. Setup
 
 ```bash
-git clone <PUBLIC_REPO_URL> retract   # when published
+git clone https://github.com/ronkenx9/retract.git
 cd retract
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate

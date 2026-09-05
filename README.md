@@ -4,7 +4,9 @@
 
 Correct one source. Kill the process. Start fresh with empty history. Dependent briefings withdraw and rebuild from Sibyl alone. An unaffected control artifact stays **byte-identical**.
 
-Hackathon entry for [Sibyl Labs](https://hack.sibyllabs.org/) (team `scar`). Build window closes **2026-09-10 23:59 UTC**.
+Hackathon entry for [Sibyl Labs](https://hack.sibyllabs.org/) (team `scar`).
+
+**Public repo:** https://github.com/ronkenx9/retract Build window closes **2026-09-10 23:59 UTC**.
 
 ## The claim (one sentence)
 
@@ -71,6 +73,18 @@ See [`g6/FRESH_CLONE.md`](g6/FRESH_CLONE.md) for a judge-oriented fresh-machine 
 Judge-facing call sites live in `g1/memory_io.py` and `g2/memory_io.py` (`write_site_*` / `read_site_*`). G3–G5 import those sites via bridges; they do **not** keep a parallel JSON fact store. Prefer `archive_entity` over hard delete. UNIQUE `(tenant_id, category, name)` drives versioning by archive + new body.
 
 Deletion litmus (G4): remove Sibyl access → correction cannot proceed. That is the gate.
+
+
+## Desk stills (G3)
+
+Locked-hash screenshots for the editorial desk (local demo):
+
+| Beat | File |
+|---|---|
+| Before (Friday) | [`g3/artifacts/screenshots/01-desk-before.png`](g3/artifacts/screenshots/01-desk-before.png) |
+| Correct preview | [`g3/artifacts/screenshots/02-correct-preview.png`](g3/artifacts/screenshots/02-correct-preview.png) |
+| After approved (Monday) | [`g3/artifacts/screenshots/03-after-approved.png`](g3/artifacts/screenshots/03-after-approved.png) |
+| After dispute | [`g3/artifacts/screenshots/04-after-dispute.png`](g3/artifacts/screenshots/04-after-dispute.png) |
 
 ## License
 
