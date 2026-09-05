@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RETRACT — Selective invalidation after a cold start</title>
+  <meta name="description" content="RETRACT: Correct one source. Kill the process. Fresh cold start. Dependent briefings withdraw and rebuild. Unaffected control artifact stays byte-identical. Powered by Sibyl Memory." />
+  <meta name="theme-color" content="#0c0c0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">RETRACT <span>sibyl-memory-client==0.8.0</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#hashes">Hashes</a>
+        <a href="#proof">Proof</a>
+        <a href="#how">How</a>
+        <a href="#desk">Desk</a>
+        <a class="cta-link" href="https://github.com/ronkenx9/retract" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">scar · Sibyl Labs hackathon</p>
+        <h1>Selective invalidation after a cold start.</h1>
+        <p class="claim">
+          <strong>Correct one source. Kill the process. Fresh cold start.</strong>
+          Dependent briefings withdraw and rebuild. Unaffected control artifact stays
+          <strong>byte-identical</strong>. Powered by Sibyl Memory
+          (<code>sibyl-memory-client==0.8.0</code>).
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/ronkenx9/retract" rel="noopener noreferrer">View on GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/download/v0.1.0/retract-g5-cold-start-demo.mp4" rel="noopener noreferrer">Demo video</a>
+          <a class="btn btn-ghost" href="https://github.com/ronkenx9/retract/releases/tag/v0.1.0" rel="noopener noreferrer">Release v0.1.0</a>
+        </div>
+        <div class="meta-line">
+          <span>MIT license</span>
+          <a href="proof.html">Proof ladder →</a>
+          <span>Local desk only: 127.0.0.1:8765</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="hashes">
+      <div class="wrap">
+        <p class="section-label">Locked corpus</p>
+        <h2>SHA-256 hashes</h2>
+        <p class="lede">Byte-identical control. Press-brief moves Friday → Monday (approved) or dispute. Values from the repo README — do not invent metrics.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Artifact</th>
+                <th>Status</th>
+                <th>SHA-256</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="artifact">company-blurb <span class="badge badge-control">control</span></td>
+                <td class="status">always unchanged</td>
+                <td class="hash">8846d618d6c377adbf6dd53a6939d4be01d5b67b5c4d6ff65fb12e5ab94453f7</td>
+              </tr>
+              <tr>
+                <td class="artifact">press-brief</td>
+                <td class="status">Friday (seed)</td>
+                <td class="hash">746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096</td>
+              </tr>
+              <tr>
+                <td class="artifact">press-brief</td>
+                <td class="status">Monday (approved)</td>
+                <td class="hash">37437dcd61110f51274bfe64b727d9c448b8e2b2329efacd4b7f9b473aab0e03</td>
+              </tr>
+              <tr>
+                <td class="artifact">press-brief</td>
+                <td class="status">not established (dispute)</td>
+                <td class="hash">8fa56152e8f681171fb82e8cd186bbd23e9b98850a703af4687df4023624cb67</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="wrap">
+        <p class="section-label">G0–G5</p>
+        <h2>Proof ladder</h2>
+        <p class="lede">Short labels from the root README. Full paths and artifacts live in the repository.</p>
+        <div class="ladder">
+          <div class="ladder-item">
+            <div class="gate">G0</div>
+            <div class="ladder-body">
+              <strong>Rules lock</strong>
+              <p>Pinned client 0.8.0, MIT intent, submit checklist.</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G1</div>
+            <div class="ladder-body">
+              <strong>Cold-start</strong>
+              <p>Seed → kill → correct; selective invalidation.</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G2</div>
+            <div class="ladder-body">
+              <strong>Versions / claims / graphs</strong>
+              <p>Typed sources, corrections, dispute, hash-locked graphs.</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G3</div>
+            <div class="ladder-body">
+              <strong>Editorial desk</strong>
+              <p>Local FastAPI desk on 127.0.0.1:8765 (local-only, not hosted).</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G4</div>
+            <div class="ladder-body">
+              <strong>Adversarial suite</strong>
+              <p>Six cases: stale cache, repeat, conflict, tenants, deletion litmus, concurrent.</p>
+            </div>
+          </div>
+          <div class="ladder-item">
+            <div class="gate">G5</div>
+            <div class="ladder-body">
+              <strong>Live cold-start</strong>
+              <p>G5_PROOF=PASS — live kill and fresh process; demo video in release v0.1.0.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Deletion litmus</h3>
+          <p>Remove Sibyl → selective invalidation fails. That is the gate (G4).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <p class="section-label">Mechanism</p>
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Seed truth into Sibyl</h3>
+              <p>Sources and dependents live in Sibyl Memory as the sole semantic store — not a parallel JSON fact cache.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Correct one source</h3>
+              <p>Approve a correction or open a dispute. Versioning uses archive + new body under UNIQUE (tenant_id, category, name).</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Kill the process. Fresh cold start.</h3>
+              <p>Empty history. RETRACT reads truth only from Sibyl after a genuine cold start.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num" aria-hidden="true"></div>
+            <div>
+              <h3>Dependents withdraw and rebuild</h3>
+              <p>Press-brief regenerates from corrected sources. The control artifact (company-blurb) stays byte-identical.</p>
+            </div>
+          </div>
+        </div>
+        <p class="note">Editorial desk UI runs locally at http://127.0.0.1:8765 — not a hosted product surface.</p>
+      </div>
+    </section>
+
+    <section id="desk">
+      <div class="wrap">
+        <p class="section-label">G3 stills</p>
+        <h2>Editorial desk</h2>
+        <p class="lede">Locked-hash screenshots from the local desk. Click through for full resolution.</p>
+        <div class="gallery">
+          <figure class="shot">
+            <a href="desk/01-desk-before.png" target="_blank" rel="noopener">
+              <img src="desk/01-desk-before.png" alt="Desk before correction — Friday seed state" width="960" height="540" loading="lazy" />
+              <figcaption>
+                <span class="beat">01 · Before</span>
+                Friday seed — press-brief and control on the desk
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="shot">
+            <a href="desk/02-correct-preview.png" target="_blank" rel="noopener">
+              <img src="desk/02-correct-preview.png" alt="Correct preview on the editorial desk" width="960" height="540" loading="lazy" />
+              <figcaption>
+                <span class="beat">02 · Correct preview</span>
+                Preview of the pending source correction
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="shot">
+            <a href="desk/03-after-approved.png" target="_blank" rel="noopener">
+              <img src="desk/03-after-approved.png" alt="Desk after approved Monday correction" width="960" height="540" loading="lazy" />
+              <figcaption>
+                <span class="beat">03 · After approved</span>
+                Monday press-brief — control hash unchanged
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="shot">
+            <a href="desk/04-after-dispute.png" target="_blank" rel="noopener">
+              <img src="desk/04-after-dispute.png" alt="Desk after dispute — not established" width="960" height="540" loading="lazy" />
+              <figcaption>
+                <span class="beat">04 · After dispute</span>
+                Not established — dispute path hash
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">RETRACT</p>
+        <p class="footer-meta">
+          Team scar · Sibyl Labs hackathon · MIT ·
+          Sibyl Memory client pinned at 0.8.0.
+          Never store bearer tokens in the repo or this site.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ronkenx9/retract" rel="noopener noreferrer">github.com/ronkenx9/retract</a>
+        <a href="https://github.com/ronkenx9/retract/releases/tag/v0.1.0" rel="noopener noreferrer">Release v0.1.0</a>
+        <a href="https://github.com/ronkenx9/retract/releases/download/v0.1.0/retract-g5-cold-start-demo.mp4" rel="noopener noreferrer">Demo video (mp4)</a>
+        <a href="proof.html">Proof ladder page</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
