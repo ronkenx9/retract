@@ -6,7 +6,9 @@ Correct one source. Kill the process. Start fresh with empty history. Dependent 
 
 Hackathon entry for [Sibyl Labs](https://hack.sibyllabs.org/) (team `scar`).
 
-**Public repo:** https://github.com/ronkenx9/retract Build window closes **2026-09-10 23:59 UTC**.
+**Public repo:** https://github.com/ronkenx9/retract
+**Live demo:** https://retract-scar.vercel.app
+Build window closes **2026-09-10 23:59 UTC**.
 
 ## The claim (one sentence)
 
