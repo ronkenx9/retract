@@ -1,24 +1,24 @@
 {
   "phase": "before",
-  "ts": "2026-09-05T14:05:33Z",
+  "ts": "2026-09-05T16:39:10Z",
   "sources": [
     {
-      "id": "dffb645c-a3f4-4378-af69-ffb2ed54e192",
+      "id": "2cb9ebf0-78d9-4eb5-8aad-667b33c9cde1",
       "name": "novadesk-launch",
       "version": 1,
       "day": "Friday",
       "archived": false,
       "supersedes": null,
-      "source_version_id": "4ed406fb-6e06-43db-b66f-61be74cd056b",
+      "source_version_id": "2c3aab4b-56ce-4289-a30a-bddc93b6d0a7",
       "status": "active",
       "claim": "NovaDesk public launch is on Friday."
     }
   ],
   "claims": [
     {
-      "id": "43f248c1-2431-46de-a37e-dab275407a10",
+      "id": "e906cc45-7615-477e-a2e6-d1217d1fe350",
       "artifact": "press-brief",
-      "source_version_id": "4ed406fb-6e06-43db-b66f-61be74cd056b",
+      "source_version_id": "2c3aab4b-56ce-4289-a30a-bddc93b6d0a7",
       "status": "active",
       "quote": "NovaDesk public launch is on Friday."
     }
@@ -34,7 +34,7 @@
     },
     {
       "name": "press-brief",
-      "depends_on_source_version_id": "4ed406fb-6e06-43db-b66f-61be74cd056b",
+      "depends_on_source_version_id": "2c3aab4b-56ce-4289-a30a-bddc93b6d0a7",
       "content_sha256": "746e9d25a3756bd775702b5e2976cb2a1ab70c4a432a4e9f4b6824a8761e9096",
       "text": "PRESS BRIEF \u2014 NovaDesk\nEmbargo lifts: Friday\nHeadline: NovaDesk launches to the public on Friday.\nCall to action: Mark your calendar for Friday.\n",
       "claim_ids": [
