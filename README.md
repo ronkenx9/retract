@@ -10,6 +10,20 @@ Hackathon entry for [Sibyl Labs](https://hack.sibyllabs.org/) (team `scar`).
 **Live demo:** https://retract-scar.vercel.app
 Build window closes **2026-09-10 23:59 UTC**.
 
+## Why this matters
+
+Agents and teams rarely fail because they *can't* produce work. They fail because **old work keeps getting served after the fact behind it changed.** Someone corrects a launch date, a price, a policy, a spec — but the press brief that cited it, the cached summary, the downstream doc, the next agent in the chain all still repeat the old version. Nobody re-derived anything; they just trusted a stale copy.
+
+RETRACT makes the stale work **withdraw itself.** Correct the source once, and every artifact that depended on it rebuilds from memory — while everything that didn't depend on it is left byte-for-byte untouched. The correction propagates; nothing else moves.
+
+Where this shows up:
+
+- **Editorial / PR** — an embargo date slips from Friday to Monday. Every brief that cited Friday must change; the boilerplate company blurb must not.
+- **Multi-agent handoffs** — agent A's finding is retracted. The next agent hired should inherit the retraction, not re-run on a discredited fact.
+- **Compliance / knowledge bases** — a policy is superseded. Documents that quote it withdraw; unrelated records stay provably intact.
+
+The hard part isn't regenerating everything — that's easy and wasteful. It's regenerating **exactly** what changed and proving you didn't touch anything else. And it only works if a *fresh* session, with no in-memory history, can still tell what depended on what — which is why memory has to be load-bearing, not a cache. That proof is what the rest of this repo is.
+
 ## The claim (one sentence)
 
 Sibyl Memory (`sibyl-memory-client==0.8.0`) is the **sole semantic store**: after a genuine cold start, RETRACT reads truth only from Sibyl, regenerates dependents of a corrected source, and leaves unrelated artifacts untouched.
@@ -36,11 +50,12 @@ Sibyl Memory (`sibyl-memory-client==0.8.0`) is the **sole semantic store**: afte
 
 Submission packaging (Prior Work, claims→evidence, fresh-clone notes, inventory): [`g6/`](g6/).
 
-## Demo (local only)
+## Demo
 
-Continuous cold-start cut (do **not** publish without Tega’s yes):
+Narrated 2:04 walkthrough of every beat — desk (Friday) → correction preview → apply (press rebuilds to Monday, control byte-identical) → dispute (not-established) → G5 cold-start `PASS` → G4 deletion litmus. The desk beats are driven on the live app; hashes on screen match the locked table above. Demo video URL is on the [submission page]; the live desk is at https://retract-scar.vercel.app.
 
-- Video: `g5/retract-g5-cold-start-demo.mp4` (60s, 1920×1080)
+Reproduce the underlying cold-start locally:
+
 - Shot list: `g5/SHOT_LIST.md`
 - Unedited trace: `g5/artifacts/g5_unedited_trace.txt`
 
